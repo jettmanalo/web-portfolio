@@ -35,6 +35,10 @@ const toolboxItems = [
     iconType: JavascriptIcon,
   },
   {
+    title: "Tailwind",
+    iconType: HTMLIcon,
+  },
+  {
     title: "MongoDB",
     iconType: HTMLIcon,
   },
@@ -59,6 +63,9 @@ const toolboxItems = [
     iconType: JavascriptIcon,
   },
   {
+    title: "Tailwind",
+    iconType: HTMLIcon,
+  },{
     title: "MongoDB",
     iconType: HTMLIcon,
   },
@@ -71,16 +78,8 @@ const toolboxItems = [
     iconType: ReactIcon,
   },
   {
-    title: "MongoDB",
-    iconType: HTMLIcon,
-  },
-  {
-    title: "Express.js",
-    iconType: CSSIcon,
-  },
-  {
-    title: "React",
-    iconType: ReactIcon,
+    title: "Node.js",
+    iconType: ChromeIcon,
   },
 ];
 
@@ -102,16 +101,14 @@ const About = () => {
         experiences."
             />
 
-            <ToolboxItems items={toolboxItems} />
             <ToolboxItems
               items={toolboxItems}
-              className="mt-6"
-              // itemsWrapperClassName="translate-x-1/2"
+              itemsWrapperClassName="animate-move-left [animation-duration:120s]"
             />
             <ToolboxItems
               items={toolboxItems}
               className="mt-6 pb-6"
-              // itemsWrapperClassName="-translate-x-1/2"
+              itemsWrapperClassName="-translate-x-1/2 animate-move-right [animation-duration:120s]"
             />
           </Card>
         </div>
