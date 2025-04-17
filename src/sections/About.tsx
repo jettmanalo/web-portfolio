@@ -1,22 +1,35 @@
 import Card from "@/components/Card";
 import SectionHeader from "@/components/SectionHeader";
+import ToolboxItems from "@/components/ToolboxItems";
+import CardHeader from "@/components/CardHeader";
+
+import MongoDBIcon from "@/assets/icons/mongodb.svg";
+import ExpressIcon from "@/assets/icons/express.svg";
+import ReactIcon from "@/assets/icons/react.svg";
+import NodeJSIcon from "@/assets/icons/nodejs.svg";
+import NextJSIcon from "@/assets/icons/nextjs.svg";
+import TypescriptIcon from "@/assets/icons/typescript.svg";
 import JavascriptIcon from "@/assets/icons/square-js.svg";
+import DjangoIcon from "@/assets/icons/django.svg";
+import FlaskIcon from "@/assets/icons/flask.svg";
+import PythonIcon from "@/assets/icons/python.svg";
+import MySQLIcon from "@/assets/icons/mysql.svg";
+import TailwindIcon from "@/assets/icons/tailwind.svg";
+import BootstrapIcon from "@/assets/icons/bootstrap.svg";
 import HTMLIcon from "@/assets/icons/html5.svg";
 import CSSIcon from "@/assets/icons/css3.svg";
-import ReactIcon from "@/assets/icons/react.svg";
-import ChromeIcon from "@/assets/icons/chrome.svg";
+import GitIcon from "@/assets/icons/git.svg";
 import GithubIcon from "@/assets/icons/github.svg";
-import CardHeader from "@/components/CardHeader";
-import ToolboxItems from "@/components/ToolboxItems";
+import FigmaIcon from "@/assets/icons/figma.svg";
 
 const toolboxItems = [
   {
     title: "MongoDB",
-    iconType: HTMLIcon,
+    iconType: MongoDBIcon,
   },
   {
     title: "Express.js",
-    iconType: CSSIcon,
+    iconType: ExpressIcon,
   },
   {
     title: "React",
@@ -24,62 +37,66 @@ const toolboxItems = [
   },
   {
     title: "Node.js",
-    iconType: ChromeIcon,
+    iconType: NodeJSIcon,
+  },
+  {
+    title: "Next.js",
+    iconType: NextJSIcon,
   },
   {
     title: "TypeScript",
-    iconType: GithubIcon,
+    iconType: TypescriptIcon,
   },
   {
     title: "JavaScript",
     iconType: JavascriptIcon,
   },
   {
+    title: "Django",
+    iconType: DjangoIcon,
+  },
+  {
+    title: "Flask",
+    iconType: FlaskIcon,
+  },
+];
+
+const toolboxItemsTwo = [
+  {
+    title: "Python",
+    iconType: PythonIcon,
+  },
+  {
+    title: "MySQL",
+    iconType: MySQLIcon,
+  },
+  {
     title: "Tailwind",
+    iconType: TailwindIcon,
+  },
+  {
+    title: "Bootstrap",
+    iconType: BootstrapIcon,
+  },
+  {
+    title: "HTML5",
     iconType: HTMLIcon,
   },
   {
-    title: "MongoDB",
-    iconType: HTMLIcon,
-  },
-  {
-    title: "Express.js",
+    title: "CSS3",
     iconType: CSSIcon,
   },
   {
-    title: "React",
-    iconType: ReactIcon,
+    title: "Git",
+    iconType: GitIcon,
   },
   {
-    title: "Node.js",
-    iconType: ChromeIcon,
-  },
-  {
-    title: "TypeScript",
+    title: "GitHub",
     iconType: GithubIcon,
   },
   {
-    title: "JavaScript",
-    iconType: JavascriptIcon,
-  },
-  {
-    title: "Tailwind",
-    iconType: HTMLIcon,
-  },{
-    title: "MongoDB",
-    iconType: HTMLIcon,
-  },
-  {
-    title: "Express.js",
-    iconType: CSSIcon,
-  },
-  {
-    title: "React",
-    iconType: ReactIcon,
-  },
-  {
-    title: "Node.js",
-    iconType: ChromeIcon,
+    title: "Figma",
+    iconType: FigmaIcon,
   },
 ];
 
@@ -103,12 +120,12 @@ const About = () => {
 
             <ToolboxItems
               items={toolboxItems}
-              itemsWrapperClassName="animate-move-left [animation-duration:120s]"
+              itemsWrapperClassName="animate-move-left [animation-duration:60s]"
             />
             <ToolboxItems
-              items={toolboxItems}
+              items={toolboxItemsTwo}
               className="mt-6 pb-6"
-              itemsWrapperClassName="-translate-x-1/2 animate-move-right [animation-duration:120s]"
+              itemsWrapperClassName="animate-move-right [animation-duration:60s]"
             />
           </Card>
         </div>
