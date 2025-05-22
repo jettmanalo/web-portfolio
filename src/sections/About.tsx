@@ -21,6 +21,8 @@ import CSSIcon from "@/assets/icons/css3.svg";
 import GitIcon from "@/assets/icons/git.svg";
 import GithubIcon from "@/assets/icons/github.svg";
 import FigmaIcon from "@/assets/icons/figma.svg";
+import ArrowUpRight from "@/assets/icons/arrow-up-right.svg";
+import ArrowDown from "@/assets/icons/arrow-down.svg";
 
 const toolboxItems = [
   {
@@ -59,9 +61,6 @@ const toolboxItems = [
     title: "Flask",
     iconType: FlaskIcon,
   },
-];
-
-const toolboxItemsTwo = [
   {
     title: "Python",
     iconType: PythonIcon,
@@ -109,8 +108,38 @@ const About = () => {
           title="A Glimpse Into My World"
           description="Learn more about who I am, what I do, and what inspires me."
         />
+        <div className="mt-20 flex flex-col md:flex-row gap-6">
+          <div className="w-full">
+            <Card>
+              <CardHeader
+                title="Get to Know Me"
+                description="&nbsp;&nbsp;&nbsp;&nbsp;I'm a web developer with a passion for crafting clean, responsive websites that not only look great but offer intuitive user experiences. With a strong foundation in front-end development and a keen eye for UI/UX design, I bring ideas to life through thoughtful code and user-centered design. Whether it's building from scratch or optimizing existing interfaces, I focus on creating seamless digital experiences that engage and inspire."
+              />
+            </Card>
+          </div>
 
-        <div className="mt-20">
+          <div className="w-full">
+            <Card className="h-full">
+              <CardHeader
+                title="Résumé"
+                description="View or download my resume to see what I bring to the table."
+              />
+
+              <div className="flex flex-col md:flex-row justify-center items-center gap-4 p-6 pt-0 md:pb-8 md:px-10">
+                <a
+                  href="https://drive.google.com/file/d/1GMO4y1LiAoIYpkfnPktksLpBqCFcuS2m/view?usp=sharing"
+                  target="_blank"
+                  className="inline-flex justify-center items-center gap-2 border border-white/15 h-12 rounded-xl w-full"
+                >
+                  <span className="font-semibold">View</span>
+                  <ArrowUpRight className="size-4" />
+                </a>
+              </div>
+            </Card>
+          </div>
+        </div>
+
+        <div className="mt-6">
           <Card>
             <CardHeader
               title="My Toolbox"
@@ -118,15 +147,7 @@ const About = () => {
         experiences."
             />
 
-            <ToolboxItems
-              items={toolboxItems}
-              itemsWrapperClassName="animate-move-left [animation-duration:60s]"
-            />
-            <ToolboxItems
-              items={toolboxItemsTwo}
-              className="mt-6 pb-6"
-              itemsWrapperClassName="animate-move-right [animation-duration:60s]"
-            />
+            <ToolboxItems items={toolboxItems} />
           </Card>
         </div>
       </div>

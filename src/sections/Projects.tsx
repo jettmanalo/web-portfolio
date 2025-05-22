@@ -1,73 +1,69 @@
-import darkSaasLandingPage from "@/assets/images/dark-saas-landing-page.png";
-import lightSaasLandingPage from "@/assets/images/light-saas-landing-page.png";
-import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
+import freshlyPicked from "@/assets/images/freshlyPicked.png";
+import QnAI from "@/assets/images/QnAI.png";
+import PricePal from "@/assets/images/PricePal.png";
+import QuicKeys from "@/assets/images/QuicKeys.png";
+import JettManalo from "@/assets/images/JettManalo.png";
 import Image from "next/image";
 import CheckCircleIcon from "@/assets/icons/check-circle.svg";
 import ArrowUpRight from "@/assets/icons/arrow-up-right.svg";
-import grainImage from "@/assets/images/grain.jpg";
 import SectionHeader from "@/components/SectionHeader";
 import Card from "@/components/Card";
 
 const portfolioProjects = [
   {
-    company: "Acme Corp",
-    year: "2022",
-    title: "Dark Saas Landing Page",
+    company: "FreshlyPicked",
+    title: "Online Grocery Store",
     results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
+      { title: "MERN Stack, JavaScript" },
+      { title: "HTML/CSS, Tailwind" },
+      { title: "Stripe" },
     ],
-    link: "https://youtu.be/4k7IdSLxh6w",
-    image: darkSaasLandingPage,
+    link: "https://github.com/jettmanalo/freshly-picked",
+    image: freshlyPicked,
   },
   {
-    company: "Innovative Co",
-    year: "2021",
-    title: "Light Saas Landing Page",
+    company: "QnAI",
+    title: "AI Mock Job Interviewer",
     results: [
-      { title: "Boosted sales by 20%" },
-      { title: "Expanded customer reach by 35%" },
-      { title: "Increased brand awareness by 15%" },
+      { title: "Next.js, React, TypeScript" },
+      { title: "Tailwind, HTML/CSS" },
+      { title: "Firebase, Vapi" },
     ],
-    link: "https://youtu.be/7hi5zwO75yc",
-    image: lightSaasLandingPage,
+    link: "https://github.com/jettmanalo/QnAI",
+    image: QnAI,
   },
   {
-    company: "Quantum Dynamics",
-    year: "2023",
-    title: "AI Startup Landing Page",
+    company: "PricePal",
+    title: "Barcode Price Checker",
     results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
+      { title: "Swift" },
+      { title: "SwiftUI" },
+      { title: "Firebase" },
     ],
-    link: "https://youtu.be/Z7I5uSRHMHg",
-    image: aiStartupLandingPage,
+    link: "https://github.com/jettmanalo/PricePal",
+    image: PricePal,
   },
   {
-    company: "Acme Corp",
-    year: "2022",
-    title: "Dark Saas Landing Page",
+    company: "QuicKeys",
+    title: "Car Rental Website",
     results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
+      { title: "C#, Blazor" },
+      { title: "Tailwind" },
+      { title: "HTML/CSS" },
     ],
-    link: "https://youtu.be/4k7IdSLxh6w",
-    image: darkSaasLandingPage,
+    link: "https://github.com/jettmanalo/quickeys-car-rental-website",
+    image: QuicKeys,
   },
   {
-    company: "Innovative Co",
-    year: "2021",
-    title: "Light Saas Landing Page",
+    company: "Jett Manalo",
+    title: "Portfolio Website",
     results: [
-      { title: "Boosted sales by 20%" },
-      { title: "Expanded customer reach by 35%" },
-      { title: "Increased brand awareness by 15%" },
+      { title: "Next.js, React, TypeScript" },
+      { title: "Tailwind, HTML/CSS" },
+      { title: "Web3Forms" },
     ],
-    link: "https://youtu.be/7hi5zwO75yc",
-    image: lightSaasLandingPage,
+    link: "https://jettmanalo.vercel.app/",
+    image: JettManalo,
   },
 ];
 
@@ -89,10 +85,9 @@ export const ProjectsSection = () => {
             >
               <div className="lg:grid lg:grid-cols-2 lg:gap-16">
                 <div className="lg:pb-16">
-                  <div className="bg-gradient-to-r from-emerald-300 to-sky-400 inline-flex gap-2 font-bold uppercase tracking-widest text-sm text-transparent bg-clip-text">
+                  <div className="bg-gradient-to-r from-emerald-300 to-sky-400 inline-flex gap-2 font-bold tracking-widest text-sm text-transparent bg-clip-text">
                     <span>{project.company}</span>
                     <span>&bull;</span>
-                    <span>{project.year}</span>
                   </div>
 
                   <h3 className="font-serif text-2xl md:text-4xl mt-2 md:mt-5">
@@ -108,9 +103,9 @@ export const ProjectsSection = () => {
                     ))}
                   </ul>
 
-                  <a href={project.link}>
+                  <a href={project.link} target="_blank">
                     <button className="bg-white text-gray-950 h-12 w-full md:w-auto px-6 rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8">
-                      <span>Visit Live Site</span>
+                      <span>{projectIndex === 4 ? "Visit Live Site" : "Visit GitHub"}</span>
                       <ArrowUpRight className="size-4" />
                     </button>
                   </a>

@@ -11,27 +11,41 @@ const Contact = () => {
           description="Big ideas start with a simple hello. Reach out and let's get started."
         />
 
-        <form className="flex flex-col items-center text-sm mt-10">
+        <form
+          className="flex flex-col items-center text-sm mt-10"
+          action="https://api.web3forms.com/submit"
+          method="POST"
+        >
+          <input
+            type="hidden"
+            name="access_key"
+            value="d33357aa-3d01-43fc-b12f-db32349ff096"
+          ></input>
+
           <div className="flex flex-col md:flex-row items-center gap-8 w-[350px] md:w-[700px]">
-            <div className="w-full">
+            <div className="w-full uppercase">
               <label className="text-sm font-semibold">Full Name</label>
               <Card className="mt-4 rounded-xl after:rounded-xl">
                 <input
-                  className="w-full h-12 p-4 outline-none bg-transparent"
+                  className="w-full h-12 p-8 outline-none bg-transparent"
                   type="text"
                   placeholder="John Doe"
+                  name="name"
                   required
                 />
               </Card>
             </div>
 
             <div className="w-full">
-              <label className="text-sm font-semibold">Email Address</label>
+              <label className="text-sm font-semibold uppercase">
+                Email Address
+              </label>
               <Card className="mt-4 rounded-xl after:rounded-xl">
                 <input
-                  className="w-full h-12 p-4 outline-none bg-transparent"
+                  className="w-full h-12 p-8 outline-none bg-transparent"
                   type="email"
                   placeholder="johndoe@example.com"
+                  name="email"
                   required
                 />
               </Card>
@@ -39,11 +53,12 @@ const Contact = () => {
           </div>
 
           <div className="mt-6 w-[350px] md:w-[700px]">
-            <label className="text-sm font-semibold">Message</label>
+            <label className="text-sm font-semibold uppercase">Message</label>
             <Card className="mt-4 rounded-xl after:rounded-xl">
               <textarea
-                className="w-full h-40 p-4 resize-none outline-none bg-transparent"
+                className="w-full h-64 p-6 resize-none outline-none bg-transparent"
                 placeholder="Type here..."
+                name="message"
                 required
               ></textarea>
             </Card>
