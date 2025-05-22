@@ -1,4 +1,4 @@
-import freshlyPicked from "@/assets/images/freshlyPicked.png";
+import FreshlyPicked from "@/assets/images/FreshlyPicked.png";
 import QnAI from "@/assets/images/QnAI.png";
 import PricePal from "@/assets/images/PricePal.png";
 import QuicKeys from "@/assets/images/QuicKeys.png";
@@ -19,7 +19,7 @@ const portfolioProjects = [
       { title: "Stripe" },
     ],
     link: "https://github.com/jettmanalo/freshly-picked",
-    image: freshlyPicked,
+    image: FreshlyPicked,
   },
   {
     company: "QnAI",
